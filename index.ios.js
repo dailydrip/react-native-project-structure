@@ -11,20 +11,15 @@ import {
   Text,
   View
 } from 'react-native';
+import Person from './models/Person'
 
 class projectStructure extends Component {
   render() {
+    let person = new Person("Josh", 209);
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
+          {person.name} {person.isTall()}
         </Text>
       </View>
     );
@@ -42,11 +37,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
   },
 });
 
